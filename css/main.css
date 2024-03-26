@@ -17,7 +17,6 @@ html, body {
 
 html {
   font-family: "Rubik", sans-serif;
-  font-optical-sizing: auto;
 }
 
 ol, ul, li {
@@ -156,7 +155,7 @@ section .content-container {
 }
 
 #to-do:hover {
-  scale: 1.1;
+  transform: scale(1.1,1.1);
 }
 
 #to-do h2 {
@@ -201,7 +200,7 @@ section .content-container {
 }
 
 #in-progress:hover {
-  scale: 1.1;
+  transform: scale(1.1,1.1);
 }
 
 #in-progress h2 {
@@ -246,7 +245,7 @@ section .content-container {
 }
 
 #done:hover {
-  scale: 1.1;
+  transform: scale(1.1,1.1);
 }
 
 #done h2 {
