@@ -17,7 +17,6 @@ html, body {
 
 html {
   font-family: "Rubik", sans-serif;
-  font-optical-sizing: auto;
 }
 
 ol, ul, li {
@@ -156,7 +155,7 @@ section .content-container {
 }
 
 #to-do:hover {
-  scale: 1.1;
+  transform: scale(1.1,1.1);
 }
 
 #to-do h2 {
@@ -201,7 +200,7 @@ section .content-container {
 }
 
 #in-progress:hover {
-  scale: 1.1;
+  transform: scale(1.1,1.1);
 }
 
 #in-progress h2 {
@@ -246,7 +245,7 @@ section .content-container {
 }
 
 #done:hover {
-  scale: 1.1;
+  transform: scale(1.1,1.1);
 }
 
 #done h2 {
@@ -276,17 +275,27 @@ section .content-container {
 }
 
 /* CHECKBOX */
+#in-progress ul li p {
+  display: inline;
+}
+
+#done ul li p {
+  display: inline;
+}
+
 input {
   margin-right: 5px;
 }
 
-/* input[type="checkbox"]:checked + span#content {
+input[type="checkbox"]:checked + p {
   text-decoration: line-through;
-  color: grey;
-} */
-
-input[type="checkbox"]:checked + span::after {
-  content: "✅";
-  margin-left: 10px;
+  color: rgb(90, 90, 90);
 }
 
+input[type="checkbox"]:checked ~ span.progress-icon::after {
+  content: "\270D";
+}
+
+input[type="checkbox"]:checked ~ span.done-icon::after {
+  content: "\2705";
+}
